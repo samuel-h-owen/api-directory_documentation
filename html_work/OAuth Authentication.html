@@ -1,0 +1,114 @@
+<h2>Overview</h2>
+
+<p>
+    Almost every API hosted by U-M will require a valid OAuth access token in order to authenticate your app and process your request. Access tokens are issued through the API Directory's OAuth 2.0 authentication flow.
+</p>
+
+<p>
+    This tutorial will guide you through the process of authenticating your app and obtaining an access token that can be used to issue API calls.
+</p>
+
+<h2>OAuth Overview</h2>
+
+<p>
+    <a href="https://oauth.net/2/"target="_blank"
+            >OAuth 2.0</a
+          >
+          is an open protocol to allow secure authorization in a simple and standard method from web, mobile, and desktop applications. It provides a number of authorization flows aimed at providing a simple and standardized authentication framework.
+</p>
+
+<p>
+    U-M's API Directory implements OAuth 2.0's Client Credentials flow, whereby users exchange a client id and client secret, along with one or more scopes, for an access token issued by the API Directory. Once an access token is obtained, it can be passed in each API request for verification and authorization by the API endpoint.
+</p>
+
+<h2>Obtaining a Client Key and Client Secret</h2>
+
+<p>These instructions assume you know how to sign into the API Directory and have already created an app.</p>
+
+<ol>
+    <li><a href="https://dir.api.it.umich.edu/accounts/login" target="_blank"
+            >Sign in </a>to the API Directory.</li>
+    <li>Select <strong>Apps</strong> from the user drop-down menu.</li>
+    <li>Click the app in the list.</li>
+    <li>Your client key and secret are available in the API Keys section.</li>
+    <p><div class="alert alert-info small">
+        <div style="font-weight: 600">
+          <i class="fa-solid fa-star"></i> Heads Up!
+        </div>
+        <p>
+          Ensure you have subscribed your app to the API you intend to access.
+        </p>
+      </div></p>
+</ol>
+
+
+<h2>Determine the scope(s) required by an API</h2>
+
+<p>OAuth access tokens are only considered valid if their scope meets the requirements specified by the API being called. To know which scopes are required by an API follow these steps:</p>
+
+<ol>
+    <li>Navigate to the<a href="https://dir.api.it.umich.edu/apis"
+        target="_blank"> APIs </a>section of the API Directory.</li>
+    <li>Find & click on the API you wish to consume.</li>
+    <li>Within the API documentation, click on one of the <strong>PATHS</strong> entries.</li>
+    <li>Scroll to the <strong>Authentication Requirements</strong> section towards the bottom of the document.</li>
+    <li>The scope(s) associated with the API will be listed.</li>
+    <li>Pass the indicated scope value to the OAuth token provider when obtaining an access token.</li>
+</ol>
+
+<h2>Obtaining an Access Token</h2>
+
+<p>Before you can obtain an access token, you will need the following items:</p>
+
+<ol>
+    <li>An app that is subscribed to the APIs you wish to consume.</li>
+    <li>Your app's client key & secret.</li>
+    <li>The scope(s) associated with the API you will be consuming.</li>
+    </ol>
+
+<p>To obtain a token, send a request to the OAuth token provider endpoint:</p>
+<pre><code class="language-bash">curl -X POST 'https://gw.api.it.umich.edu/um/oauth2/token' \
+    --header 'content-type: application/x-www-form-urlencoded' \
+    --data 'grant_type=client_credentials' \
+    --data "client_id=$CLIENT_KEY" \
+    --data "client_secret=$CLIENT_SECRET" \
+    --data "scope=$SCOPE"</code></pre>
+
+<p>In the request above, we are making a POST request to the OAuth token provider URL. In the body of the request, we are sending the client key, client secret, scope, and client credentials grant type as form data.</p>
+
+<p>A successful response will return a JSON payload containing the access token (<code>$.access_token</code>), along with other attributes:</p>
+<pre><code class="language-json">{
+    "token_type": "Bearer",
+    "access_token": "RAA1Rvh95bGCRJ7AiO16jrj519AA", // use this!
+    "expires_in": 3599,
+    "scope": "umscheduleofclasses",
+    "client_id": "H91VgaV4NZ8Gb6pERioBPRwMxqI97x0Tv647YZrXCpBfb13442"
+}</code></pre>
+
+<p>Once you have an access token, you may call your API by passing the access token as a bearer token in the authentication header, like so:</p>
+<pre><code class="language-bash">curl -X GET 'https://gw.api.umich.edu/um/Curriculum/SOC/Terms' \
+    --header: "Authorization: Bearer $ACCESS_TOKEN"
+</code></pre>
+
+<p>The OAuth token provider is configured to handle having the required parameters passed in a number of ways. In the above example, all parameters were passed in the request body. It is also possible to send the grant type and scope as query parameters and to use Basic Authentication to pass the client id and secret.</p>
+
+<h3>Obtaining an access token using query parameters</h3>
+
+<p>In the example above, the scope and grant type values were passed in the request body as form data. It is also possible to pass these values in the query string directly:</p>
+<pre><code class="language-bash">curl -X POST "https://gw.api.it.umich.edu/um/oauth2/token?grant_type=client_credentials&scope=$SCOPE" \
+    --header 'content-type: application/x-www-form-urlencoded' \
+    --data "client_id=$CLIENT_KEY" \
+    --data "client_secret=$CLIENT_SECRET"
+</code></pre>
+
+<h3>Sending client id and secret in an authorization header</h3>
+
+<p>It is also possible to pass the client ID and secret to the token provider using
+    <a href="https://datatracker.ietf.org/doc/html/rfc7617" target="_blank"
+      >Basic Authorization</a
+    >, like so:</p>
+<pre><code class="language-bash">curl -X POST "https://gw.api.it.umich.edu/um/oauth2/token?grant_type=client_credentials&scope=$SCOPE" \
+    --basic \
+    --user $CLIENT_KEY:$CLIENT_SECRET</code></pre>
+
+
