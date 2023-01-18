@@ -65,7 +65,7 @@ Your group will be created with an expiration date one year into the future.
 ### Add members to a group
 Request method: POST
 API endpoint: `/update/member`
-data:
+Request body:
 ```json
 {
     "dn": "cn=<your group name>,ou=user groups,ou=groups,dc=umich,dc=edu",
@@ -80,9 +80,9 @@ This endpoint performs a replacement operation of the member attribute values.
 
 
 ### Add moderators to a group
-Request method: POST
-API endpoint: `/update/moderator`
-data:
+Request method: `POST`  
+API endpoint: `/update/moderator`  
+Request body:
 ```json
 {
    "dn":"cn=<your group name>,ou=user groups,ou=groups,dc=umich,dc=edu",
@@ -94,7 +94,8 @@ data:
          "email":"someone@yahoo.com",
          "name":"someone"
       }
-   }
+   ]
+}
 ```
 Do not try to add the name element without the email element, as this will not create a valid moderator value.
  
@@ -102,7 +103,7 @@ Do not try to add the name element without the email element, as this will not c
 ### Add owners to a group
 Request method: POST
 API endpoint: `/update/owner`
-data:
+Request body:
 ```json
 {
    "dn":"cn=<your group name>,ou=user groups,ou=groups,dc=umich,dc=edu",
