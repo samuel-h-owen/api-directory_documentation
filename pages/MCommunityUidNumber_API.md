@@ -1,66 +1,62 @@
 # Using the MCommunityUidNumber Endpoint
-This document provides information about the [MCommunityUidNumber](https://dir.api.it.umich.edu/docs/mcommunity/1/routes/MCommunityUidNumber/nextNumber.json/get) endpoint that is a part of the MCommunity API. The MCommunityUidNumber endpoint can be used to reserve gid numbers for groups. Instructions on making a request, available input parameters, and potential outputs and definitions are detailed in this document.
 
-This document assumes a basic understanding of the [U-M API Directory](https://dir.api.it.umich.edu). See the API Directory [Getting Started](https://dir.api.it.umich.edu/get-started) page for more information.
+This document provides information about the [MCommunityUidNumber][endpoint] endpoint that is a part of the MCommunity API. In Unix/Linux systems, a `uid` number serves as a unique identifier for a user account. The MCommunityUidNumber endpoint can be used to reserve `uid` numbers in a way that avoids overlap with ones assigned by the ITS MCommunity team and others.
 
-## About the API
-The MCommunityUidNumber endpoint can be used to reserve uid numbers for administrative accounts. A uid number is used in Unix/Linux systems as a unique identifier for an account. This service enables reservation of uid numbers in a way that avoids overlap with ones assigned by the ITS MCommunity team and others.
+This document assumes a basic understanding of the [U-M API Directory](https://dir.api.it.umich.edu). See the API Directory [Getting Started](https://dir.api.it.umich.edu/get-started) page for more information. The API is restricted to 200 calls per minute. Use the [ITS Service Status](https://status.its.umich.edu/) page to stay informed about potential outages of MCommunity or the API Directory.
 
-The API is restricted to 200 calls per minute. The MCommunityUidNumber API supports JSON (JavaScript Object Notation).
+## Getting Started
 
-Use the ITS Service Status page to stay informed about potential outages of this web service.
+To get up and running with the MCommunityGidNumber API, follow the API Directory [Getting Started](https://dir.api.it.umich.edu/get-started) guide to learn how to join a team, create an app, and get API credentials, and request access to the MCommunity API product. Once you have received approval and obtained your client key and secret, you will be able to retrieve an access token and make requests to the MCommunityUidNumber endpoint.
 
+## Input Parameters
 
-## Making a Request
-The API is located in the API Directory.
+The MCommunityUidNumber endpoint takes the following request parameters as argument that can be passed in the query string of your request:
 
-First, join a developer organization using the Getting Started Page of API Directory.
+| Parameter                    | Data Type | Example                             | Description                                                                                                                                                                |
+| ---------------------------- | --------- | ----------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Administrator<br>`adminUid`  | string    | `bjensen`                           | The uniqname of the reference person responsible for maintaining the identity—**not** the person to whome the `uidNumber` is assigned. Multiple values can be listed here. |
+| System<br>`system`           | string    | `limburger.dsc.umich.edu`           | The name of the server or system in which the admin account will be used.                                                                                                  |
+| Foreign Key<br>`foreignkey`  | string    | `bjensen1`                          | The account name or user ID of the admin account to which the `uidNumber` will be assigned.                                                                                |
+| Description<br>`description` | string    | `Shared account for research group` |
 
-Once you get access to join a developer organization:
+## Sample Request
 
-Log in to the API Directory with your uniqname and UMICH password.
-Register your application with the API Directory by adding it as a new application.
-Note the Client Id and Client Secret when you are creating the application as they will be used in getting the access tokens for API access.
-On the API Directory site, navigate to the MCommunityUidNumber API by searching for the API in the search box.
-Subscribe to the MCommunityUidNumber API by selecting your application in the list.
-Use your Client Id and Client Secret obtained in step three to generate an access token either:
-Programmatically within your application
-Or on the API page for your application
-By default, access tokens are available for one hour.
+To request a new `uid`, make a request to the endpoint like so:
 
-Make a request using the appropriate input parameters. Check the sample request and response listed below.
-Input Parameter	Definition	Data type	Example
-Administrator (uniqname)	The uniqname of the reference person responsible for maintaining the identity, not the person to whom the uidNumber is assigned. Multiple people can be listed here.	string	bjensen
-System	The name of the server or system in which the admin account will be used.	string	limburger.dsc.umich.edu (server)
-MiWorkspace (system)
-Foreign Key	Account name. The name or user ID of the admin account which will be assigned the uidNumber.	string	bjensen1
-Description	Brief description of how the admin account will be used.	string	File attach ID for MCommDev
-MiWorkspace admin account
-Shared account for research group
+```bash
+GET https://gw.api.umich.edu/um/MCommunitUidNumber/nextNumber.json?adminUid={adminUid}&system={system}&foreignkey={foreignkey}&description={description}
+```
 
-## Sample Request and Output
-Requesting a uidNumber for a system.
+As an example, consider the following request:
 
-Format of request:
+```bash
+GET https://gw.api.umich.edu/um/MCommunitUidNumber/nextNumber.json?adminUid=bjensen&system=limburger.dsc.umich.edu&foreignkey=bjensen1&description=Shared+account+for+research+group
+```
 
-GET http://apigw.it.umich.edu/um/MCommunityUidNumber?adminUid={input}&system={input}&foreignkey={input}&description={input}
-Example request:
+The above request should yield a response with the following JSON payload:
 
-?adminUid=bjensen&system=limburger.dsc.umich.edu&foreignkey=bjensen1&description=Shared+account+for+research+group
-Sample output:
-
+```json
 {
-"idNumber": {
-"description": "Shared account for research group",
-"idNumber": "1000208",
-"adminUid": "bjensen",
-"dn": "umichUidNumber=1000208,ou=uidNumbers,o=Registry"
+  "idNumber": {
+    "dn": "umichUidNumber=1000208,ou=uidNumbers,o=Registry",
+    "idNumber": "1000208",
+    "adminUid": "bjensen",
+    "description": "Shared account for research group"
+  }
 }
-}
+```
 
-## Output Definitions
-Output	Definition	Data type	Example
-description	The description that will be stored in MCommunity for this uidNumber.	string	Shared account for research group
-idNumber	The uidNumber for this account.	string	1000208
-adminUid	The uniqname of one or more people who own this uidNumber.	string	bjensen
-dn	The fully qualified distinguished name (dn) of the uidNumber object in the MCommunity LDAP tree.	DN	umichUidNumber=1000208,ou=uidNumbers,o=Registry
+The attributes of the `idNumber` response object are defined as follows:
+
+| Attribute                      | Data Type | Example                                           | Description                                                                                 |
+| ------------------------------ | --------- | ------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| Distinguished Name<br>`dn`     | string    | `umichUidNumber=1000208,ou=uidNumbers,o=Registry` | The fully-qualified distinguished name of the gidNumber object in the MCommunity LDAP tree. |
+| UID Number<br>`idNumber`       | string    | `1000208`                                         | The UID number that has been issued.                                                        |
+| Administrator(s)<br>`adminUid` | string    | `bjensen`                                         | The uniquename(s) of the gitNumber's owner.                                                 |
+| Description<br>`description`   | string    | `MCommunity Group GID`                            | The description associated with the GID number.                                             |
+
+## Additional Information
+
+For additional information about the MCommunityUidNumber endpoint, please see its [documentation][endpoint] in the API Directory. If you have additional questions, feel free to reach out to the API Directory team at [apidir-contact@umich.edu](mailto:apidir-contact@umich.edu).
+
+[endpoint]: https://dir.api.it.umich.edu/docs/mcommunity/1/routes/MCommunityUidNumber/nextNumber.json/get
