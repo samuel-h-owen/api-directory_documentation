@@ -14,9 +14,9 @@ To get up and running with the MCommunityGidNumber API, follow the API Directory
 
 The MCommunityGidNumber endpoint takes the following request parameters as arguments that can be passed in the query string of your request:
 
-| Parameter                    | Data Type | Example                   | Definition                                                                                                                               |
+| Parameter                    | Data Type | Example                   | Description                                                                                                                              |
 | ---------------------------- | --------- | ------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| Uniqname<br>`adminUid`       | string    | `bjensen`                 | The uniqname of the reference person responsible for managing the group.                                                                 |
+| Adminstrator<br>`adminUid`   | string    | `bjensen`                 | The uniqname of the reference person responsible for managing the group.                                                                 |
 | System<br>`system`           | string    | `limburger.dsc.umich.edu` | The name of the server or system in which the group will be used.                                                                        |
 | Foreign key<br>`foreignkey`  | string    | `groupname`               | The group name. If an MCommunity group, use the group email value without `@umich.edu`. For non-MCommunity groups, enter the group name. |
 | Description<br>`description` | string    | `MiWorkspace GID Number`  | Provides a description for the gidNumber.                                                                                                |
@@ -54,7 +54,7 @@ The attributes of the `idNumber` response object are defined as follows:
 | ------------------------------ | --------- | ------------------------------------------------- | ------------------------------------------------------------------------------------------- |
 | Distinguished Name<br>`dn`     | string    | `umichGidNumber=3600007,ou=gidNumbers,o=Registry` | The fully-qualified distinguished name of the gidNumber object in the MCommunity LDAP tree. |
 | Administrator(s)<br>`adminUid` | string    | `bjensen`                                         | The uniquename(s) of the gitNumber's owner.                                                 |
-| GID Number<br>`idNumber`       | string    | `3600007`                                         | The GID number.                                                                             |
+| GID Number<br>`idNumber`       | string    | `3600007`                                         | The GID number that has been issued.                                                        |
 | Description<br>`description`   | string    | `MCommunity Group GID`                            | The description associated with the GID number.                                             |
 
 ## Additional Information
