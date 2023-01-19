@@ -1,5 +1,7 @@
-# Using the MCommunityGidNumber API (Web Service)
-This document provides information about the MCommunityGidNumber application programming interface (API). The MCommunityGidNumber API is a web service that IT professionals can use to reserve gid numbers for groups. Instructions on making a request, available input parameters, and potential outputs and definitions are detailed in this document. This document assumes a basic understanding of the U-M API Directory. See the Help page on the API Directory website for information about the API Directory.
+# Using the MCommunityGidNumber API
+This document provides information about the [MCommunityGidNumber](https://dir.api.it.umich.edu/docs/mcommunity/1/routes/MCommunityGidNumber/nextNumber.json/get) endpoint that is a part of the MCommunity API. The MCommunityGidNumber endpoint can be used to reserve gid numbers for groups. Instructions on making a request, available input parameters, and potential outputs and definitions are detailed in this document.
+
+This document assumes a basic understanding of the [U-M API Directory](https://dir.api.it.umich.edu). See the API Directory [Getting Started](https://dir.api.it.umich.edu/get-started) page for more information.
 
 ## About the API
 The MCommunityGidNumber API is a web service that IT professionals can use to reserve gid numbers for groups. A gid number is used in Unix/Linux systems as a unique identifier for a group. This service enables reservation of gid numbers in a way that avoids overlap with ones assigned by the ITS MCommunity team and others.
