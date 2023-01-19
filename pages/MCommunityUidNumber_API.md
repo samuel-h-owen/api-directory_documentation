@@ -1,5 +1,7 @@
 # Using the MCommunityUidNumber Endpoint
 
+## Overview
+
 This document provides information about the [MCommunityUidNumber][endpoint] endpoint that is a part of the MCommunity API. In Unix/Linux systems, a `uid` number serves as a unique identifier for a user account. The MCommunityUidNumber endpoint can be used to reserve `uid` numbers in a way that avoids overlap with ones assigned by the ITS MCommunity team and others.
 
 This document assumes a basic understanding of the [U-M API Directory](https://dir.api.it.umich.edu). See the API Directory [Getting Started](https://dir.api.it.umich.edu/get-started) page for more information. The API is restricted to 200 calls per minute. Use the [ITS Service Status](https://status.its.umich.edu/) page to stay informed about potential outages of MCommunity or the API Directory.
