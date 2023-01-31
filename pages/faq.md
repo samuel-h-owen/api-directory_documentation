@@ -84,4 +84,4 @@ API products are the central mechanism for access control to your APIs. By defin
 
 ### How big can responses be?
 
-Apigee has a maximum response size of 10Mb. Almost all JSON response will be well under this limit, but if you plan on returning binary data this constraint might impact your design.
+Apigee has a maximum response size of 10MB. Almost all JSON responses will be well under this limit, but if you plan on returning binary data, this constraint might impact your design.
