@@ -81,3 +81,7 @@ As an API provider, you create API products to bundle your APIs and make them av
 Specifically, an API product bundles together one or more operations. An operation specifies an API proxy and resource paths that can be accessed on that proxy. An operation can also limit access by HTTP methods and by quota.
 
 API products are the central mechanism for access control to your APIs. By defining one or more API products in a developer app, you can restrict access to proxies with an API key. In Apigee, API keys are provisioned, not for APIs themselves, but for API products. In other words, API keys are provisioned for bundles of operations that define a product line or specific service plan.
+
+### How big can responses be?
+
+Apigee has a maximum response size of 10Mb. Almost all JSON response will be well under this limit, but if you plan on returning binary data this constraint might impact your design.
