@@ -82,6 +82,12 @@ Specifically, an API product bundles together one or more operations. An operati
 
 API products are the central mechanism for access control to your APIs. By defining one or more API products in a developer app, you can restrict access to proxies with an API key. In Apigee, API keys are provisioned, not for APIs themselves, but for API products. In other words, API keys are provisioned for bundles of operations that define a product line or specific service plan.
 
-### How big can responses be?
+### Are there limitations to request & response sizes?
 
-Apigee has a maximum response size of 10MB. Almost all JSON responses will be well under this limit, but if you plan on returning binary data, this constraint might impact your design.
+Within Apigee, message payload sizes are limited to 10MB for requests and responses. Exceeding this limit will yield a fault like the following:
+
+```
+{"fault":"{\"detail\":{\"errorcode\":\"protocol.http.TooBigBody\"},\"faultstring\":\"Body buffer overflow\"}"}
+```
+
+If you are designing a proxy that will handle large requests or responses (especially binary data), consider enabling [streaming](https://cloud.google.com/apigee/docs/api-platform/develop/enabling-streaming) within your proxy.
