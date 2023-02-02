@@ -59,7 +59,7 @@ The Apigee team maintains a repo of [Apigee Edge Sample API Proxies](https://git
 
 ## OpenAPI Specification
 
-Apart from configuring and testing proxies within Apigee, developers will also need to document their API using the [OpenAPI Specification][oas-spec]. The resulting json/yaml file will be published to the API Directory portal and provides all of the documentation to end-users through the API Directory.
+Apart from configuring and testing proxies within Apigee, developers will also need to document their API using the [OpenAPI Specification][oas-spec]. The resulting json/yaml file will be published to the API Directory portal and provide all of the documentation to end-users through the API Directory.
 
 There are many tools and IDE extensions to help you construct the required json/yaml for your documentation. Among the tools used by the API Directory team are [Postman's API Builder][postman-builder], SmartBear's [Swagger Editor][swagger-io], and 42Crunch's [OpenAPI (Swagger) Editor][vscode-openapi] for Visual Studio Code.
 
