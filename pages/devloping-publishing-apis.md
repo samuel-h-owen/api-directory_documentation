@@ -6,7 +6,7 @@ This guide will cover the general requirements for developing and publishing an 
 
 ## Development Experience
 
-In order to publish an API product, you will need to develop one or more API proxies, fully document and test your API, and pass security and data sensitivity audits. The API Directory runs on Google's Apigee X platform and developers are required to familiarize themselves with Apigee's approach to API development and management. To help facilitate this process, we have assembled some [high-level resources](apigee-dev-resources) for potential API developers to use as a basis for learning.
+In order to publish an API product, you will need to develop one or more API proxies, fully document and test your API, and pass security and data sensitivity audits. The API Directory runs on Google's Apigee X platform and developers are required to familiarize themselves with Apigee's approach to API development and management. To help facilitate this process, we have assembled some [high-level resources][apigee-dev-resources] for potential API developers to use as a basis for learning.
 
 In broad strokes, developing a new API product will involve the following steps:
 
@@ -26,10 +26,10 @@ Developers looking to create new API products will need to have the following co
 ## How to Develop an API
 
 1. **Request API Developer Access**  
-   To get started developing APIs, you will need to submit an [API Directory Access Request](tdx-ticket) in order to be added to the API Directory Developers MCommunity group. Membership to this group will grant you access to the [Apigee Management Console](apigee), enabling you to begin API Development.
+   To get started developing APIs, you will need to submit an [API Directory Access Request][tdx-ticket] in order to be added to the API Directory Developers MCommunity group. Membership to this group will grant you access to the [Apigee Management Console][apigee], enabling you to begin API Development.
 
 2. **Develop & Test Your API Product**  
-   Once you have access to Apigee, you may begin developing your API product within the development environment. Consult the [Apigee X Developer Resources](apigee-dev-resources) page for additional resources on how to develop your API.
+   Once you have access to Apigee, you may begin developing your API product within the development environment. Consult the [Apigee X Developer Resources][apigee-dev-resources] page for additional resources on how to develop your API.
 
 3. **Complete the API Publication Checklist & Consultation Process**  
    When you have finished developing and testing your API product, please complete the API Publication Checklist and send it to the API Directory team. They will review your configuration and take the next steps to migrate your API into the production environment. The API Directory team will review the following items:
@@ -37,7 +37,7 @@ Developers looking to create new API products will need to have the following co
    - The API product is properly configured & secured
    - The provided OpenAPI spec fully describes your API product
    - You have obtained the necessary approvals from the appropriate data stewards
-   - The data exposed by your API meets the [API Directory Data Sensitivity Guidelines](sensitivity-guidelines)
+   - The data exposed by your API meets the [API Directory Data Sensitivity Guidelines][sensitivity-guidelines]
    - For restricted APIs that will require approvals before a subscription is granted, the proper approval protocols have been defined
 
 4. **Deploy Your API Product**  
