@@ -29,7 +29,7 @@ Developers looking to create new API products will need to have the following co
    To get started developing APIs, you will need to submit an [API Directory Access Request](tdx-ticket) in order to be added to the API Directory Developers MCommunity group. Membership to this group will grant you access to the [Apigee Management Console](apigee), enabling you to begin API Development.
 
 2. **Develop & Test Your API Product**  
-   Once you have access to Apigee, you may begin developing your API product within the development environment. Consult the Apigee X Developer Resources page for additional resources on how to develop your API.
+   Once you have access to Apigee, you may begin developing your API product within the development environment. Consult the [Apigee X Developer Resources](apigee-dev-resources) page for additional resources on how to develop your API.
 
 3. **Complete the API Publication Checklist & Consultation Process**  
    When you have finished developing and testing your API product, please complete the API Publication Checklist and send it to the API Directory team. They will review your configuration and take the next steps to migrate your API into the production environment. The API Directory team will review the following items:
