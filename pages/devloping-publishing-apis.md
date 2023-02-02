@@ -32,7 +32,7 @@ Developers looking to create new API products will need to have the following co
    Once you have access to Apigee, you may begin developing your API product within the development environment. Consult the [Apigee X Developer Resources][apigee-dev-resources] page for additional resources on how to develop your API.
 
 3. **Complete the API Publication Checklist & Consultation Process**  
-   When you have finished developing and testing your API product, please complete the API Publication Checklist and send it to the API Directory team. They will review your configuration and take the next steps to migrate your API into the production environment. The API Directory team will review the following items:
+   When you have finished developing and testing your API product, please complete the [API Publication Checklist][api-publication-checklist] and send it to the API Directory team. They will review your configuration and take the next steps to migrate your API into the production environment. The API Directory team will review the following items:
 
    - The API product is properly configured & secured
    - The provided OpenAPI spec fully describes your API product
@@ -45,7 +45,8 @@ Developers looking to create new API products will need to have the following co
 
 If you have any questions or would like to schedule a consultation, reach out to the API Directory team at apidir-contact@umich.edu.
 
+[api-publication-checklist]: https://docs.google.com/spreadsheets/d/144lQUE_YfhBT3OfK1Nc_VIwHmQLBvajOvzU8s_drK_U/edit#gid=0/copy
 [apigee]: https://apigee.google.com
-[tdx-ticket]: https://teamdynamix.umich.edu/TDClient/30/Portal/Requests/TicketRequests/NewForm?ID=P0BnH7tZeYc_&RequestorType=Service
 [apigee-dev-resources]: https://documentation.its.umich.edu/?q=node/3783
 [sensitivity-guidelines]: https://documentation.its.umich.edu/node/3933
+[tdx-ticket]: https://teamdynamix.umich.edu/TDClient/30/Portal/Requests/TicketRequests/NewForm?ID=P0BnH7tZeYc_&RequestorType=Service
