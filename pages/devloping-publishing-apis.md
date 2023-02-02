@@ -41,7 +41,7 @@ Developers looking to create new API products will need to have the following co
    - For restricted APIs that will require approvals before a subscription is granted, the proper approval protocols have been defined
 
 4. **Deploy Your API Product**  
-   Once all parties are satisfied with the new API product, the API Directory team will deploy and publish you API product to the API Directory.
+   Once all parties are satisfied with the new API product, the API Directory team will deploy and publish your API product to the API Directory.
 
 If you have any questions or would like to schedule a consultation, reach out to the API Directory team at apidir-contact@umich.edu.
 
