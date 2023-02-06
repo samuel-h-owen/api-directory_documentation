@@ -13,8 +13,14 @@ This document contains a glossary with a list of terms and definitions related t
 <dt>API</dt>
 <dd>An API (Application Programming Interface) enables access to processes and data assets through a uniform interface. Web APIs usually take the form of REST or SOAP web services and provide the building blocks for creating web apps and integrations across systems.</dd>
 
+<dt>API Consumer</dt>
+<dd>An API Consumer is a person who consumes any APIs that are hosted by the API Directory. This includes a person or team who has an app subscribed to one or more APIs within the Directory, a person who is learning or experimenting how to use APIs and the data they provide, or any other entity that is consuming an API.</dd>
+
 <dt>API Credentials</dt>
 <dd>API credentials consist of two parts: an API key and an associated secret. The API key functions much like a username in that it is used to identify a particular application that is registered in the API directory. The secret associated with the API key functions much like a password—it proves ownership over the API key that is being used. In combination, the key and secret can be used to generate an access token and begin issuing calls to the API Directory.</dd>
+
+<dt>API Developer</dt>
+<dd>A person or team who has developed and/or published an API product that is hosted within the API Directory.</dd>
 
 <dt>App</dt>
 <dd>In the API Directory, an app is an entity that can subscribe to one or more APIs. Each app is issued a set of one or more credentials which can be used to identify and authenticate the app and its associated developer(s). For more information about apps, see the <a href="https://dir.api.it.umich.edu/guides/managing-apps" target="_blank">Managing Apps</a> guide.</dd>
