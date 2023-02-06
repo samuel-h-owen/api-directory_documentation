@@ -4,39 +4,6 @@ To get up and running with Apigee X, we've put together this guide to help you
 navigate through the documentation, courses, and training available for U-M
 users.
 
-## API Directory Links
-
-### API Directory Integrated Portal
-
-The integrated portal is the front-end that most users consider as the 'API Directory'.
-
-| Environment | URL                                                            |
-| ----------- | -------------------------------------------------------------- |
-| Production  | [dir.api.it.umich.edu](https://dir.api.it.umich.edu)           |
-| Test        | [dir-test.api.it.umich.edu](https://dir-test.api.it.umich.edu) |
-| Development | [dir-dev.api.it.umich.edu](https://dir-dev.api.it.umich.edu)   |
-
-### Apigee Management Console
-
-The Apigee Management Console is the backend interface used to develop and manage APIs that are listed in the API Directory. The different environments exist as separate projects within Apigee.
-
-Apigee Management Console: [apigee.google.com](https://apigee.google.com)
-
-| Environment      | Project ID          |
-| ---------------- | ------------------- |
-| Production       | `api-dir-prod-e1ca` |
-| Development/Test | `api-dir-dev-c089`  |
-
-### Gateway URLs
-
-The following are the urls that receive actual API calls.
-
-| Environment | URL                                                          |
-| ----------- | ------------------------------------------------------------ |
-| Production  | [gw.api.it.umich.edu](https://gw.api.it.umich.edu)           |
-| Test        | [gw-test.api.it.umich.edu](https://gw-test.api.it.umich.edu) |
-| Development | [gw-dev.api.it.umich.edu](https://gw-dev.api.it.umich.edu)   |
-
 ## Apigee Documentation
 
 Google's [Apigee X Documentation](https://cloud.google.com/apigee/docs) provides robust documentation for all facets of Apigee, along with how-to guides, tutorials, and more. If you are getting started, we highly recommend exploring the [Guides](https://cloud.google.com/apigee/docs/guides) section—especially the develop and publish modules—for a good overview of how to create and deploy API products in Apigee.
@@ -55,6 +22,26 @@ If you are just getting started on Apigee, we would call out the following topic
   - [SpikeArrest Policy](https://cloud.google.com/apigee/docs/api-platform/reference/policies/spike-arrest-policy)
   - [AssignMessage Policy](https://cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy)
   - [ExtractVariables Policy](https://cloud.google.com/apigee/docs/api-platform/reference/policies/extract-variables-policy)
+
+## API Directory Links
+
+Use the following links to navigate between the different components and environments related to the API Directory:
+
+- **API Directory Portal**  
+  End-user portal providing a listing of all published APIs, along with interfaces for managing apps and teams
+  - Production: [dir.api.it.umich.edu](https://dir.api.it.umich.edu)
+  - Test: [dir-test.api.it.umich.edu](https://dir-test.api.it.umich.edu)
+  - Development: [dir-dev.api.it.umich.edu](https://dir-dev.api.it.umich.edu)
+- **Apigee Management Console**  
+  Administrative backend for developing and managing API products
+  - Link: [apigee.google.com](https://apigee.google.com)
+  - Production project: `api-dir-prod-e1ca`
+  - Development/Test project: `api-dir-dev-c089`
+- **API Gateway Host**  
+   Host names configured to handle actual API calls & traffic
+  - Production: [gw.api.it.umich.edu](https://gw.api.it.umich.edu)
+  - Test: [gw-test.api.it.umich.edu](https://gw-test.api.it.umich.edu)
+  - Development: [gw-dev.api.it.umich.edu](https://gw-dev.api.it.umich.edu)
 
 ## Google Cloud Skills Boost
 
