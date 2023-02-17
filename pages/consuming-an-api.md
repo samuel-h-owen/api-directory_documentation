@@ -39,11 +39,17 @@ Once you have configured your app and obtained its credentials, you will be able
   If you are on a mobile device, the <strong>Try this API</strong> section will be located at the bottom of your page.
 </div>
 
+## Try This API Code Snippets
+
+The **Try This API** tool will also generate sample code snippets of your request in various languages. Click the expand icon (<i class="fa-solid fa-expand" role="img"></i>) near the top right of the tool to view code samples in cURL, HTTP, Python, Node.js, JavaScript, PHP, and Java.
+
+![Try This API code snippets widget screenshot](../files/try-this-api-code-samples.png)
+
 ## Postman Collections
 
 The API Directory Team has assembled a repository of [Postman collections][postman-repo] for each API that list listed in the Directory. See the associated [How To][postman-howto] guide for more information about Postman and the using the provided collections.
 
-## Code Examples
+## API Directory Code Examples
 
 Please consult the samples provided in the [API Directory code examples][apidir-code-examples-repo] GitHub repo. The repo offers sample code for consuming APIs using Bash, JavaScript, and Python.
 

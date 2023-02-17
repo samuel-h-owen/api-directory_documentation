@@ -45,10 +45,13 @@ U-M faculty, staff, sponsored affiliates, and students are eligible to use the A
 
    The **Try this API** tool will also generate sample requests in popular languages, including cURL, Python, Node, JS, PHP, and Java. Use these sample requests to help inform your own code.
 
+   For more detailed instructions on how to consume an API, see the [Consuming an API][consuming-an-api] guide.
+
 [api-dir]: https://dir.api.it.umich.edu
 [api-dir-sign-in]: https://dir.api.it.umich.edu/accounts/login
 [api-dir-apis]: https://dir.api.it.umich.edu/apis
 [api-dir-teams]: https://dir.api.it.umich.edu/teams
+[consuming-an-api]: https://documentation.its.umich.edu/node/3990
 [terms-conditions]: https://dir.api.it.umich.edu/terms
 [managing-teams]: https://documentation.its.umich.edu/node/3927
 [managing-apps]: https://documentation.its.umich.edu/node/3928
