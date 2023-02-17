@@ -1,7 +1,3 @@
----
-node: 336
----
-
 # Using the MCommunity People API
 
 This document provides information about the People endpoints that are available as a part of the [MCommunity API][mcommunity-people-api]. This API can be used to programmatically get public information from the MCommunity Directory. Instructions for making a request, available request parameters, and sample outputs are detailed in this document. This document assumes a basic understanding of the U-M API Directory.
