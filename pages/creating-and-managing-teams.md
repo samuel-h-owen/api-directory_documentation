@@ -91,4 +91,6 @@ Team members can be added with one of the following roles:
 
 - Read-only privileges for developer team members, developer team details, and apps.
 
+<script src="../files/current-teams.js"></script>
+
 [sign-in]: https://dir.api.it.umich.edu/accounts/login
