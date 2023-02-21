@@ -4,6 +4,45 @@ To get up and running with Apigee X, we've put together this guide to help you
 navigate through the documentation, courses, and training available for U-M
 users.
 
+## Apigee Documentation
+
+Google's [Apigee X Documentation](https://cloud.google.com/apigee/docs) provides robust documentation for all facets of Apigee, along with how-to guides, tutorials, and more. If you are getting started, we highly recommend exploring the [Guides](https://cloud.google.com/apigee/docs/guides) section—especially the develop and publish modules—for a good overview of how to create and deploy API products in Apigee.
+
+If you are just getting started on Apigee, we would call out the following topics as primary areas of interest:
+
+- [Publishing overview](https://cloud.google.com/apigee/docs/api-platform/publish/publishing-overview#task2registeranappdeveloperonedge)
+- [Introduction to API products](https://cloud.google.com/apigee/docs/api-platform/publish/what-api-product)
+- [Introduction to OAuth 2.0](https://cloud.google.com/apigee/docs/api-platform/security/oauth/oauth-introduction)
+- [Creating reusable shared flows](https://cloud.google.com/apigee/docs/api-platform/fundamentals/shared-flows)
+- [Handling faults](https://cloud.google.com/apigee/docs/api-platform/fundamentals/fault-handling)
+- [Policy reference overview](https://cloud.google.com/apigee/docs/api-platform/reference/policies/reference-overview-policy)  
+   _Bookmark this!_ And familiarize yourself with these policies:
+
+  - [OAuthV2 Policy](https://cloud.google.com/apigee/docs/api-platform/reference/policies/oauthv2-policy)
+  - [SpikeArrest Policy](https://cloud.google.com/apigee/docs/api-platform/reference/policies/spike-arrest-policy)
+  - [AssignMessage Policy](https://cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy)
+  - [ExtractVariables Policy](https://cloud.google.com/apigee/docs/api-platform/reference/policies/extract-variables-policy)
+
+## API Directory Links
+
+Use the following links to navigate between the different components and environments related to the API Directory:
+
+- **API Directory Portal**  
+  End-user portal providing a listing of all published APIs, along with interfaces for managing apps and teams
+  - Production: [dir.api.it.umich.edu](https://dir.api.it.umich.edu)
+  - Test: [dir-test.api.it.umich.edu](https://dir-test.api.it.umich.edu)
+  - Development: [dir-dev.api.it.umich.edu](https://dir-dev.api.it.umich.edu)
+- **Apigee Management Console**  
+  Administrative backend for developing and managing API products
+  - Link: [apigee.google.com](https://apigee.google.com)
+  - Production project: `api-dir-prod-e1ca`
+  - Development/Test project: `api-dir-dev-c089`
+- **API Gateway Host**  
+   Host names configured to handle actual API calls & traffic
+  - Production: [gw.api.it.umich.edu](https://gw.api.it.umich.edu)
+  - Test: [gw-test.api.it.umich.edu](https://gw-test.api.it.umich.edu)
+  - Development: [gw-dev.api.it.umich.edu](https://gw-dev.api.it.umich.edu)
+
 ## Google Cloud Skills Boost
 
 Google Cloud Skills Boost provides modularized training along different skill
@@ -33,25 +72,6 @@ As you progress through the course content, we recommend the following:
   A new temporary GCP organization and Google login are provisioned for each lab. If you try to login with a normal browser window, your U-M login or private Google credentials can cause issues and unwanted side-effects.
 - **Set aside time for labs**  
   Though the content for each lab may only take a few minutes, you will need to dedicate extra time for the lab environment to be provisioned. Once you start a lab, it typically takes 7–8 minutes for the lab environment to be provisioned. For some labs, you will need to wait for the full GCP/Apigee deployment to finish, which can take upwards of 25 minutes.
-
-## Apigee Documentation
-
-Google's [Apigee X Documentation](https://cloud.google.com/apigee/docs) provides robust documentation for all facets of Apigee, along with how-to guides, tutorials, and more. If you are getting started, we highly recommend exploring the [Guides](https://cloud.google.com/apigee/docs/guides) section—especially the develop and publish modules—for a good overview of how to create and deploy API products in Apigee.
-
-If you are just getting started on Apigee, we would call out the following topics as primary areas of interest:
-
-- [Publishing overview](https://cloud.google.com/apigee/docs/api-platform/publish/publishing-overview#task2registeranappdeveloperonedge)
-- [Introduction to API products](https://cloud.google.com/apigee/docs/api-platform/publish/what-api-product)
-- [Introduction to OAuth 2.0](https://cloud.google.com/apigee/docs/api-platform/security/oauth/oauth-introduction)
-- [Creating reusable shared flows](https://cloud.google.com/apigee/docs/api-platform/fundamentals/shared-flows)
-- [Handling faults](https://cloud.google.com/apigee/docs/api-platform/fundamentals/fault-handling)
-- [Policy reference overview](https://cloud.google.com/apigee/docs/api-platform/reference/policies/reference-overview-policy)  
-   _Bookmark this!_ And familiarize yourself with these policies:
-
-  - [OAuthV2 Policy](https://cloud.google.com/apigee/docs/api-platform/reference/policies/oauthv2-policy)
-  - [SpikeArrest Policy](https://cloud.google.com/apigee/docs/api-platform/reference/policies/spike-arrest-policy)
-  - [AssignMessage Policy](https://cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy)
-  - [ExtractVariables Policy](https://cloud.google.com/apigee/docs/api-platform/reference/policies/extract-variables-policy)
 
 ## Sample Proxies
 
