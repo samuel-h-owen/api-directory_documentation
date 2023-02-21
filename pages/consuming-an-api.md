@@ -35,7 +35,7 @@ Once you have configured your app and obtained its credentials, you will be able
    </figure>
 
 <div class="alert alert-info small">
-  <div class="alert-heading" style="font-weight: bold;"><i class="fa-solid fa-mobile" aria-hidden="true" role="img"></i>On mobile?</div>
+  <div class="alert-heading" style="font-weight: bold; margin-right: .25em;"><i class="fa-solid fa-mobile" aria-hidden="true" role="img"></i>On mobile?</div>
   If you are on a mobile device, the <strong>Try this API</strong> section will be located at the bottom of your page.
 </div>
 
