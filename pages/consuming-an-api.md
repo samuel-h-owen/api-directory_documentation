@@ -41,7 +41,7 @@ Once you have configured your app and obtained its credentials, you will be able
 
 ## Try This API Code Snippets
 
-The **Try This API** tool will also generate sample code snippets of your request in various languages. Click the expand icon (<i class="fa-solid fa-expand" role="img" aria-label="Try this API expand icon" style="background: #ccc; padding: 3px; border-radius: 2px; border: 1px solid #ddd; margin: 0 .125em;"></i>) near the top right of the tool to view code samples in cURL, HTTP, Python, Node.js, JavaScript, PHP, and Java.
+The **Try This API** tool will also generate sample code snippets of your request in various languages. Click the expand icon (<i class="fa-solid fa-expand" role="img" aria-label="Try this API expand icon" style="background: #eee; padding: 3px; border-radius: 2px; border: 1px solid #ddd; margin: 0 .125em;"></i>) near the top right of the tool to view code samples in cURL, HTTP, Python, Node.js, JavaScript, PHP, and Java.
 
 ![Try This API code snippets widget screenshot](../files/try-this-api-code-samples.png)
 
